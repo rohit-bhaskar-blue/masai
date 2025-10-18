@@ -1,5 +1,5 @@
 import string
-from src.utils import clean_text, average
+from src.utils import clean_text, average, add
 
 def test_clean_text_basic():
     assert clean_text("Hello, World!") == "hello world"
@@ -15,3 +15,9 @@ def test_average_numbers():
 
 def test_average_empty_list():
     assert average([]) == 0
+
+
+def test_add():
+    assert add(2, 3) == 5
+    assert add(-1, 1) == 0
+    assert add(0, 0) == 0
